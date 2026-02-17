@@ -1,0 +1,26 @@
+> # Terraform
+> *.tfstate
+> .tfstate.*
+> .terraform/
+> *.tfvars
+> !terraform.tfvars.example
+> crash.log
+> override.tf
+> terraform.rc
+> 
+> # Python
+> __pycache__/
+> *.py[cod]
+> *.class
+> venv/
+> env/
+> .Python
+> *.so
+> .pytest_cache/
+> 
+> # IDE 
+> .vscode/
+> .idea/
+> *.swp
+> *.swo
+> .DS_Store
