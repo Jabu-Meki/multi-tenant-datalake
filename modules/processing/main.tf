@@ -10,6 +10,9 @@ resource "aws_lambda_function" "etl_lambda" {
   role          = aws_iam_role.lambda_role.arn
   handler       = "etl_job.handler"
   runtime       = "python3.9"
+  memory_size   = 512
+  timeout       = 60
+  layers        = ["arn:aws:lambda:us-east-1:336392948345:layer:AWSDataWrangler-Python39:1"]
 
   source_code_hash = data.archive_file.lambda_zip.output_base64sha256
 }

@@ -22,3 +22,10 @@ module "processing" {
   bucket_arn = module.storage.bucket_arn
   bucket_id  = module.storage.bucket_name
 }
+
+module "governance" {
+  source      = "../../modules/governance"
+  bucket_id   = module.storage.bucket_name
+  bucket_arn  = module.storage.bucket_arn
+  environment = "dev"
+}
