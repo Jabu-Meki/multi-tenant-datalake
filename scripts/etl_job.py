@@ -14,7 +14,7 @@ def handler(event, context):
     file_name = path_parts[-1].split('.')[0] # Get 'data' from 'data.csv'
     
     # 2. Define where the clean file should go
-    curated_path = f"s3://{bucket}/curated/{tenant_id}/{file_name}.parquet"
+    curated_path = f"s3://{bucket}/curated/tenant_id={tenant_id}/"
     
     print(f"Transforming: {raw_key} -> {curated_path}")
 
